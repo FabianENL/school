@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fabia\\Desktop\\school\\programmeren\\visual studio\\les1\\les 1 programmeren\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F67A99E4-6507-4FD9-A709-D0D89B2D9CF9}|les 1 programmeren\\les 1 programmeren.vcxproj|C:\\Users\\fabia\\Desktop\\school\\programmeren\\visual studio\\les1\\les 1 programmeren\\les 1 programmeren\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F67A99E4-6507-4FD9-A709-D0D89B2D9CF9}|les 1 programmeren\\les 1 programmeren.vcxproj|solutionrelative:les 1 programmeren\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\programmeren\\visual studio\\les1\\les 1 programmeren\\les 1 programmeren\\main.c",
+              "RelativeDocumentMoniker": "les 1 programmeren\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\programmeren\\visual studio\\les1\\les 1 programmeren\\les 1 programmeren\\main.c",
+              "RelativeToolTip": "les 1 programmeren\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-09-02T07:20:23.821Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
