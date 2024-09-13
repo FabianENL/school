@@ -1,2 +1,4 @@
-﻿  opdracht5.c
-  week2.vcxproj -> C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week2\week2\x64\Debug\week2.exe
+﻿  opdracht16.c
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week2\week2\week2\opdracht16.c(12,22): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week2\week2\week2\opdracht16.c(14,14): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  week2.vcxproj -> C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week2\week2\x64\Debug\week2.exe
