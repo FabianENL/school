@@ -6,3 +6,8 @@ Bij week en 2 is elke opdracht een losse source file. om een opdracht moet je ee
 
 ## overige weken
 hier is elke opdracht een los project in een blank solution
+
+
+### specifieke instructies
+- #### week 3
+  - Opdracht 3 staat in week3/opdracht3.png
