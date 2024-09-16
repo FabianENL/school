@@ -16,4 +16,3 @@ void main() {
 	}
 	printf("%d", result);
 }
-
