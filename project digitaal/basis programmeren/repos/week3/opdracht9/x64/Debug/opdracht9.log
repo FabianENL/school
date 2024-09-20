@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\opdracht9\main.c(13,3): warning C4098: 'main': 'void' function returning a value
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\opdracht9\main.c(18,3): warning C4098: 'main': 'void' function returning a value
+  opdracht9.vcxproj -> C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\x64\Debug\opdracht9.exe

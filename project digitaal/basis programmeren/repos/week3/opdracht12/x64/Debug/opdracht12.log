@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\opdracht12\main.c(32,10): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\opdracht12\main.c(34): warning C4716: 'calcEpowX': must return a value
+  opdracht12.vcxproj -> C:\Users\fabia\OneDrive\Bureaublad\school\project digitaal\basis programmeren\repos\week3\x64\Debug\opdracht12.exe
