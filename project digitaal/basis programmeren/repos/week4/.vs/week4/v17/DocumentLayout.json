@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{816832CD-1761-468C-A4F4-407D9A1EEA30}|opdracht_4\\opdracht_4.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht_4\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{816832CD-1761-468C-A4F4-407D9A1EEA30}|opdracht_4\\opdracht_4.vcxproj|solutionrelative:opdracht_4\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8C16-248E-4B68-AE1B-3C64D35D3E9E}|opdracht7\\opdracht7.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht7\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{406F8C16-248E-4B68-AE1B-3C64D35D3E9E}|opdracht7\\opdracht7.vcxproj|solutionrelative:opdracht7\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530EA316-47E1-4081-8124-EE437997851D}|opdracht6\\opdracht6.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht6\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{530EA316-47E1-4081-8124-EE437997851D}|opdracht6\\opdracht6.vcxproj|solutionrelative:opdracht6\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACB2A95-1817-4AAA-9E74-470F674A3F7A}|opdracht5\\opdracht5.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht5\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3ACB2A95-1817-4AAA-9E74-470F674A3F7A}|opdracht5\\opdracht5.vcxproj|solutionrelative:opdracht5\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{959E083E-FBDC-4D28-B1C1-9C2AADF31E48}|opdracht3\\opdracht4.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht3\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{959E083E-FBDC-4D28-B1C1-9C2AADF31E48}|opdracht3\\opdracht4.vcxproj|solutionrelative:opdracht3\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6401AD0B-E7CC-4D8D-8636-48FB371B21A4}|opdracht2\\opdracht2.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6401AD0B-E7CC-4D8D-8636-48FB371B21A4}|opdracht2\\opdracht2.vcxproj|solutionrelative:opdracht2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D70C356-485A-4E70-8446-8141C1DBD4A7}|opdracht1\\opdracht1.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5D70C356-485A-4E70-8446-8141C1DBD4A7}|opdracht1\\opdracht1.vcxproj|solutionrelative:opdracht1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EE7BCD0C-62AE-4A0C-955D-C89E5D36884D}|opdracht9\\opdracht9.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht9\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EE7BCD0C-62AE-4A0C-955D-C89E5D36884D}|opdracht9\\opdracht9.vcxproj|solutionrelative:opdracht9\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -14,11 +42,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht7\\main.c",
+              "RelativeDocumentMoniker": "opdracht7\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht7\\main.c",
+              "RelativeToolTip": "opdracht7\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:55.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht6\\main.c",
+              "RelativeDocumentMoniker": "opdracht6\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht6\\main.c",
+              "RelativeToolTip": "opdracht6\\main.c",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:45.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht5\\main.c",
+              "RelativeDocumentMoniker": "opdracht5\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht5\\main.c",
+              "RelativeToolTip": "opdracht5\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:38.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht3\\main.c",
+              "RelativeDocumentMoniker": "opdracht3\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht3\\main.c",
+              "RelativeToolTip": "opdracht3\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:29.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht2\\main.c",
+              "RelativeDocumentMoniker": "opdracht2\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht2\\main.c",
+              "RelativeToolTip": "opdracht2\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:21.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht1\\main.c",
+              "RelativeDocumentMoniker": "opdracht1\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht1\\main.c",
+              "RelativeToolTip": "opdracht1\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:38:12.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht_4\\main.c",
+              "RelativeDocumentMoniker": "opdracht_4\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht_4\\main.c",
+              "RelativeToolTip": "opdracht_4\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-01T05:37:57.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week4\\opdracht9\\main.c",
               "RelativeDocumentMoniker": "opdracht9\\main.c",

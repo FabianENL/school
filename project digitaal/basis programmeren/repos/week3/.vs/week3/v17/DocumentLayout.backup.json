@@ -31,8 +31,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-16T08:10:09.605Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -40,8 +39,8 @@
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week3\\opdracht2\\main.c",
               "RelativeDocumentMoniker": "opdracht2\\main.c",
-              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week3\\opdracht2\\main.c",
-              "RelativeToolTip": "opdracht2\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week3\\opdracht2\\main.c*",
+              "RelativeToolTip": "opdracht2\\main.c*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-16T08:10:57.452Z",
