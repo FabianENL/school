@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3DFEA2D-1A1B-4B67-BEAB-818EDA0182A8}|opdracht7\\opdracht7.vcxproj|C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week5\\opdracht7\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3DFEA2D-1A1B-4B67-BEAB-818EDA0182A8}|opdracht7\\opdracht7.vcxproj|solutionrelative:opdracht7\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week5\\opdracht7\\main.c",
+              "RelativeDocumentMoniker": "opdracht7\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\school\\project digitaal\\basis programmeren\\repos\\week5\\opdracht7\\main.c",
+              "RelativeToolTip": "opdracht7\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-07T12:12:36.744Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

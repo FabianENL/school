@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week5\opdarcht1\main.c(7,2): warning C4098: 'kwadrateer': 'void' function returning a value
+  opdarcht1.vcxproj -> C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week5\x64\Debug\opdarcht1.exe
