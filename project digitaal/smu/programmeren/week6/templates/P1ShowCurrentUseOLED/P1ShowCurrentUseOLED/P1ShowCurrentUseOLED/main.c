@@ -15,7 +15,7 @@
 #include "OLED/Font5x8.h"
 
 enum DSMR {V2, V5};
-int dsmr = V2;
+int dsmr = V5;
 
 #define MAX_COMMAND_LEN 80
 
@@ -125,6 +125,7 @@ int main(void)
 			        
 			command[index] = '\0';
 			index = 0;
+			
 			        
 			if (sscanf(command, "1-0:1.7.0(%d.%d*kW)", &kw, &deckw) == 2)
 			{
@@ -133,14 +134,26 @@ int main(void)
 					// v2 is sending 2 digits after the '.', so 10 W accuracy
 					deckw *= 10;
 				}
+				
+				counter++;
 				        
 				sprintf(buffer, "%5d: %5d W", counter, kw * 1000 + deckw);
 				
 		        GLCD_GotoXY(10, 30);
 		        GLCD_PrintString(buffer);
 		        GLCD_Render();
- 
-				counter++;
+				
+			}
+			
+			float usage; 
+
+			if (sscanf(command, "0-1:24.2.1(%f*m3)", &usage) == 1)
+			{
+				sprintf(buffer, "%5d: %.3f m3", counter, usage);
+				
+				GLCD_GotoXY(10, 40);
+				GLCD_PrintString(buffer);
+				GLCD_Render();
 			}
 		}
     }

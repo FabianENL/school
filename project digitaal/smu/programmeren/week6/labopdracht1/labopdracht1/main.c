@@ -15,7 +15,7 @@ void USART3_init(void)
 	PORTB.DIRSET = PIN0_bm;										/* set pin 0 of PORT B (TXd) as output*/
 	PORTB.DIRCLR = PIN1_bm;										/* set pin 1 of PORT B (RXd) as input*/
 	
-	USART3.BAUD = (uint16_t)(USART3_BAUD_RATE(9600));			/* set the baud rate*/
+	USART3.BAUD = (uint16_t)(USART3_BAUD_RATE(115200));			/* set the baud rate*/
 	
 	USART3.CTRLC = USART_CHSIZE0_bm	| USART_CHSIZE1_bm;			/* set the data format to 8-bit*/
 	
