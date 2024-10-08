@@ -5703,7 +5703,7 @@ int main(void)
 		{
 			char buffer[50];
 			
-			int bit1 = (PORTE.IN & PIN3_bm) ? 0 : 1;
+			int bit1 = !(PORTE.IN & PIN3_bm); 
     2d70:	68 94       	set
     2d72:	ee 24       	eor	r14, r14
     2d74:	e7 f8       	bld	r14, 7
@@ -5718,13 +5718,13 @@ int main(void)
     2d86:	d3 94       	inc	r13
     2d88:	8d 25       	eor	r24, r13
     2d8a:	81 70       	andi	r24, 0x01	; 1
-			int bit2 = (PORTE.IN & PIN2_bm) ? 0 : 1;
+			int bit2 = !(PORTE.IN & PIN2_bm); 
     2d8c:	90 85       	ldd	r25, Z+8	; 0x08
     2d8e:	96 95       	lsr	r25
     2d90:	96 95       	lsr	r25
     2d92:	9d 25       	eor	r25, r13
     2d94:	91 70       	andi	r25, 0x01	; 1
-			int bit3 = (PORTE.IN & PIN1_bm) ? 0 : 1;
+			int bit3 = !(PORTE.IN & PIN1_bm); 
     2d96:	20 85       	ldd	r18, Z+8	; 0x08
     2d98:	26 95       	lsr	r18
     2d9a:	2d 25       	eor	r18, r13

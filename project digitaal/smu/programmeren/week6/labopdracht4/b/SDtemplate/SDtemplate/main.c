@@ -45,9 +45,9 @@ int main(void)
 		{
 			char buffer[50];
 			
-			int bit1 = (PORTE.IN & PIN3_bm) ? 0 : 1;
-			int bit2 = (PORTE.IN & PIN2_bm) ? 0 : 1;
-			int bit3 = (PORTE.IN & PIN1_bm) ? 0 : 1;
+			int bit1 = !(PORTE.IN & PIN3_bm); 
+			int bit2 = !(PORTE.IN & PIN2_bm); 
+			int bit3 = !(PORTE.IN & PIN1_bm); 
 			
 			sprintf(buffer, "Hai. %d %d %d\r\n", bit1, bit2, bit3);
 			
@@ -58,7 +58,7 @@ int main(void)
 			PORTE.OUTSET = PIN0_bm;
 			_delay_ms(100);
 			PORTE.OUTCLR = PIN0_bm;
-			_delay_ms(900);zx
+			_delay_ms(900);
 			
 			
 		}else{
