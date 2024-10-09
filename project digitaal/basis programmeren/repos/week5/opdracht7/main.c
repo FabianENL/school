@@ -12,12 +12,7 @@ void printArray(int* arr, int length) {
 
 
 int isSchrikkel(int jaar) {
-	if ((jaar % 4 == 0 && !(jaar % 100 == 0)) || jaar % 400 == 0) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
+	return ((jaar % 4 == 0 && !(jaar % 100 == 0)) || jaar % 400 == 0);
 }
 
 int schrikkelDagen(int d1, int m1, int y1, int d2, int m2, int y2) {
