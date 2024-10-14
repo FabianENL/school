@@ -1,3 +1,3 @@
 ﻿  main.c
-C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week5\opdracht7\main.c(68,1): warning C4716: 'vulMaandArray': must return a value
+C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week5\opdracht7\main.c(95,1): warning C4716: 'vulMaandArray': must return a value
   opdracht7.vcxproj -> C:\Users\fabia\Desktop\school\project digitaal\basis programmeren\repos\week5\x64\Debug\groteProgramma.exe

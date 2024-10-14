@@ -1,5 +1,10 @@
 // week 5 7 t/m 16
 
+// 
+// VRAAG BIJ OPGAVE 16: moet het niet printMaand(maandArray, 42, huidigeMaand); zijn ipv printMaand(2021, 42, 1);
+// (daar ben ik wel vanuit gegaan)
+// 
+
 #include <stdio.h>
 
 void printArray(int* arr, int length) {
@@ -9,7 +14,32 @@ void printArray(int* arr, int length) {
 	printf("\n");
 }
 
+void printMaand(int* maand, int length, int maandNr) {
+	static char maandToStr[12][4] = { "Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt",  "Nov", "Dec" };
+	printf("        %s\n", maandToStr[maandNr - 1]);
+	printf("MA DI WO DO VR ZA ZO\n");
 
+	int n = 0;
+	for (int i = 0; i < length; i++) {
+		n++;
+		if (maand[i] == 0) {
+			printf("   ");
+		}
+		else {
+			if (maand[i] < 10) {
+				printf("%d  ", maand[i]);
+			}
+			else {
+				printf("%d ", maand[i]);
+			}
+		}
+		if (n > 6) {
+			printf("\n");
+			n = 0;
+		}
+	}
+	printf("\n");
+}
 
 int isSchrikkel(int jaar) {
 	return ((jaar % 4 == 0 && !(jaar % 100 == 0)) || jaar % 400 == 0);
@@ -39,7 +69,8 @@ int eersteWeekDagMaand(int m, int y) {
 	}
 
 	int jarenOffset = y - 2000;
-	int dagenOffset = ((jarenOffset * 365) + schrikkelDagen(1, 1, 2000, 1, m, y))+ 5 + dagenInJaar;
+	int dagenOffset = ((jarenOffset * 365) + schrikkelDagen(1, 1, 2000, 1, m - 1, y))+ 5 + dagenInJaar;
+	if (m == 3) { dagenOffset++; }
 
 	return (dagenOffset % 7);
 }
@@ -63,15 +94,20 @@ int vulMaandArray(int m, int y, int* maand) {
 
 }
 
+void maandKalender(int m, int y) {
+	int maandArray[42] = { 0 };
+	vulMaandArray(m, y, maandArray);
+	printMaand(maandArray, 42, m);
+}
+
+
+void jaarKalender(int y) {
+	printf("        %d\n", y);
+	for (int i = 1; i < 13; i++) {
+		maandKalender(i, y);
+	}
+}
 
 void main() {
-	int maand[38] = {0};
-	vulMaandArray(2, 2024, maand);
-	printf("eerste dag week maand shit: %d \n", eersteWeekDagMaand(2, 2024));
-	
-	printArray(maand, 38);
-
-	// printf("%d\n", eersteWeekDagMaand(10, 2024));
-
-
+	jaarKalender(2025);
 }
