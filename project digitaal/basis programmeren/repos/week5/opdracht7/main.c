@@ -70,7 +70,10 @@ int eersteWeekDagMaand(int m, int y) {
 
 	int jarenOffset = y - 2000;
 	int dagenOffset = ((jarenOffset * 365) + schrikkelDagen(1, 1, 2000, 1, m - 1, y))+ 5 + dagenInJaar;
-	if (m == 3) { dagenOffset++; }
+
+	if (m == 3 && isSchrikkel(y)) {
+		dagenOffset++;
+	}
 
 	return (dagenOffset % 7);
 }
