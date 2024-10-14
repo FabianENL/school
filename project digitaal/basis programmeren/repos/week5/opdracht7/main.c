@@ -1,4 +1,4 @@
-// week 5 7 t/m 16 en week 6
+// week 5 7 t/m 16
 
 #include <stdio.h>
 
@@ -32,7 +32,6 @@ int schrikkelDagen(int d1, int m1, int y1, int d2, int m2, int y2) {
 
 int eersteWeekDagMaand(int m, int y) {
 	int dagen[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-	if (isSchrikkel(y)) { dagen[1] = 29; }
 
 	int dagenInJaar = 0;
 	for (int i = 0; i < m - 1; i++) {
@@ -40,7 +39,7 @@ int eersteWeekDagMaand(int m, int y) {
 	}
 
 	int jarenOffset = y - 2000;
-	int dagenOffset = jarenOffset * 365 + schrikkelDagen(1, 1, 2000, 1, 1, y) + 5 + dagenInJaar;
+	int dagenOffset = ((jarenOffset * 365) + schrikkelDagen(1, 1, 2000, 1, m, y))+ 5 + dagenInJaar;
 
 	return (dagenOffset % 7);
 }
@@ -48,23 +47,31 @@ int eersteWeekDagMaand(int m, int y) {
 
 int vulMaandArray(int m, int y, int* maand) {
 	int maanden[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	if (isSchrikkel(y)) { maanden[1] = 29; }
 
-	if (isSchrikkel(y)) {
-		maanden[1] = 29;
+
+	int offset = eersteWeekDagMaand(m, y);
+
+	for (int i = 0; i < offset - 1; i++) {
+		maand[i] = 0;
 	}
 
-	for (int i = 0; i < maanden[m]; i++) {
-		maand[i] = i + 1;
+
+	for (int i = offset; i < maanden[m - 1] + offset; i++) {
+		maand[i] = i + 1 - offset;
 	}
 
-	
 }
 
 
 void main() {
-	int maand[31] = {0};
-	vulMaandArray(1, 2024, maand);
+	int maand[38] = {0};
+	vulMaandArray(2, 2024, maand);
+	printf("eerste dag week maand shit: %d \n", eersteWeekDagMaand(2, 2024));
+	
+	printArray(maand, 38);
+
+	// printf("%d\n", eersteWeekDagMaand(10, 2024));
 
 
-	printArray(maand, 31);
 }
