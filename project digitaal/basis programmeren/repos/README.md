@@ -13,3 +13,5 @@ om de opdradcht te runnen doe je rechter muisklik op de solution en klik je op "
 - #### week 3
   - Opdracht 3 staat in week3/opdracht3.png
   - Opdracht 4 staat in week3/opdracht4.png
+- ### week 6
+  - Opdracht 3 staat in week6/week6 opdracht3.docx 
