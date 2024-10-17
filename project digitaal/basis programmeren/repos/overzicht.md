@@ -14,6 +14,7 @@ week 1
 - 13 kwadrateren
 - 14 kwadraat of 3d macht (keuzemenu)
 
+
 week 2
 - 1 overflow check
 - 2 grootte van datatypes printen
@@ -32,6 +33,7 @@ week 2
 - 15 halve driehoek printen
 - 16 binary to decimal conversion
 
+
 week 3
 - 1 flowchart programmeren
 - 2 flowchart programmeren
@@ -47,6 +49,7 @@ week 3
 - 12 faculteit, getal van euler, euler^x
 - 13 switch statement
 
+
 week 4
 - 1 double gemiddelde(int a, int b, int c)
 - 2 returnt de aantal keer dat de functie is aangeroepen
@@ -58,6 +61,7 @@ week 4
 - 8 som van alle priemgetallen tussen 1 en n
 - 9 fibonacci recursief
 
+
 week 5
 - kalender opdracht = opdracht 7
 - 1 kwadrateert elke item in een array (functie)
@@ -67,6 +71,7 @@ week 5
 - 5 functie die het grootste getal in een array returnt
 - 6 een functie die een array sorteert met bubble sort van klein naar groot
 - 7 kalender opdracht
+
 
 week 6
 - 1 (eigenlijk opdracht 1 2 en 2) verschillende bit-wise operators
