@@ -1,25 +1,25 @@
 #include <stdio.h>
 
-
-int fibboNogwat(int n) {
-    if (n <= 1) {
-        return n;  
-    }
-
-    int a = 0, b = 1, c;
-
-    for (int i = 2; i <= n; i++) {
-        c = a + b;  
-        a = b;
-        b = c;
-    }
-
-    return c;
+int fibonacci(int n) {
+   if(n == 0)
+      return 0;
+   else if(n == 1)
+      return 1;
+   else
+      return (fibonacci(n-1) + fibonacci(n-2));
 }
 
 int main() {
-    int result = fibboNogwat(10);
-    printf("Het 5-de Fibonacci-getal is: %d\n", result);
+   int n;
 
-    return 0;
+   printf("Enter the number of terms\n");
+   scanf("%d", &n);
+
+   printf("Fibonacci Series: ");
+   
+   for (int i = 0; i < n; i++) {
+      printf("%d ", fibonacci(i));
+   }
+   
+   return 0;
 }
