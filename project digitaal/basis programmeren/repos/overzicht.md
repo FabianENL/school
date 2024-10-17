@@ -1,4 +1,4 @@
-week 1
+- week 1
     - 1 integer scannen en printen
     - 2 3 floats scannen en het gimiddelde printen
     - 3 2 integers scannen en de grootste printen
