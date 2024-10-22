@@ -71,6 +71,7 @@ week 5
 - 5 functie die het grootste getal in een array returnt
 - 6 een functie die een array sorteert met bubble sort van klein naar groot
 - 7 kalender opdracht
+- lesaantekeningen pointers
 
 
 week 6
