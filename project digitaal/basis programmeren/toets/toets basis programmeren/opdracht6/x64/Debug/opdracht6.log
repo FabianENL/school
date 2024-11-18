@@ -1,0 +1,12 @@
+﻿  main.c
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(8,14): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(11,14): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(16,14): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(19,14): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(30,11): warning C4477: 'printf' : format string '%c' requires an argument of type 'int', but variadic argument 1 has type 'char *'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(30,11): warning C4313: 'printf': '%c' in format string conflicts with argument 1 of type 'char *'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(39,13): warning C4047: 'function': 'char *(*)[8]' differs in levels of indirection from 'char [8][8]'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(39,13): warning C4024: 'vul2DArray': different types for formal and actual parameter 1
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(40,15): warning C4047: 'function': 'char *(*)[8]' differs in levels of indirection from 'char [8][8]'
+C:\Users\fabia\Desktop\toets basis programmeren\opdracht6\main.c(40,15): warning C4024: 'print2DArray': different types for formal and actual parameter 1
+  opdracht6.vcxproj -> C:\Users\fabia\Desktop\toets basis programmeren\x64\Debug\opdracht6.exe

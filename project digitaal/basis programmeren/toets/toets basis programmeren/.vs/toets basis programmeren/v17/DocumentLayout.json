@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fabia\\Desktop\\toets basis programmeren\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE8E796-9DEA-4FD4-A515-0ABCCD25182B}|opdracht6\\opdracht6.vcxproj|C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht6\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8DE8E796-9DEA-4FD4-A515-0ABCCD25182B}|opdracht6\\opdracht6.vcxproj|solutionrelative:opdracht6\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4661549A-5680-4923-9B99-930B30F92156}|opdracht5\\opdracht5.vcxproj|C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht5\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4661549A-5680-4923-9B99-930B30F92156}|opdracht5\\opdracht5.vcxproj|solutionrelative:opdracht5\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht6\\main.c",
+              "RelativeDocumentMoniker": "opdracht6\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht6\\main.c",
+              "RelativeToolTip": "opdracht6\\main.c",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-22T07:22:08.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht5\\main.c",
+              "RelativeDocumentMoniker": "opdracht5\\main.c",
+              "ToolTip": "C:\\Users\\fabia\\Desktop\\toets basis programmeren\\opdracht5\\main.c",
+              "RelativeToolTip": "opdracht5\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-22T07:13:37.402Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
