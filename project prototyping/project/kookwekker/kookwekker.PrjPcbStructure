@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=KookWekker.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=KookWekker.SchDoc|Designator=Display|SchDesignator=Display|FileName=Display.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=Display.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=KookWekker.SchDoc|Designator=Logic|SchDesignator=Logic|FileName=Logic.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=Logic.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
