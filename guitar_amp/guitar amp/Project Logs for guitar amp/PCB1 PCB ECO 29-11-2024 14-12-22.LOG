@@ -1,0 +1,4 @@
+Change Net Name : Old Net Name=+9 New Net Name=V++
+Change Net Name : Old Net Name=GND New Net Name=v--
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
