@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=C2-1
+Removed Pin From Net: NetName=Vdd Pin=C2-2
+Removed Member From Class: ClassName=Logic Member=C2
+Added Component: Designator=C6(C1206)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "03-11-2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Creation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Chip Capacitor, Body 3.2x1.6mm, Height 1.7mm, IPC Medium Density"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "C1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "03-11-2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Windesheim"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
