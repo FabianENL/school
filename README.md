@@ -1,4 +1,5 @@
 # Welkom
+# (OUTDATED!)
 Hier zijn al mijn huiswerk opgaven
 
 ## [Project digitaal](https://github.com/FabianENL/school/tree/main/project%20digitaal)
