@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>DxC_stepper</name>
-            <creation-uuid>f3369ad5-a6d7-49df-85dc-15e341393b29</creation-uuid>
+            <name>Week6_systeemintegratie</name>
+            <creation-uuid>e938a26e-7141-4ec0-887f-a80ecb563803</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
