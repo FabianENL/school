@@ -4,7 +4,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-const int steps = 125;
 const int stepDelay = 7.5; // Delay between steps in ms
 
 int draaien = 0;
