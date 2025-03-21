@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/production/week6_statemachine_LED.X.production.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>1299</used>                     
+      <free>129773</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>9</used>                     
+      <free>16375</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
