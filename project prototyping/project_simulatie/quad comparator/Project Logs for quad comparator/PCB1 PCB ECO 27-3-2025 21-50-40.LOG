@@ -1,0 +1,14 @@
+Added Net: Name=1IN
+Added Net: Name=1OUT
+Added Net: Name=2IN
+Added Net: Name=2OUT
+Added Net: Name=3IN
+Added Net: Name=3OUT
+Added Net: Name=3V3
+Added Net: Name=4IN
+Added Net: Name=4OUT
+Added Net: Name=GND
+Added Net: Name=NetU1_2
+Added Class: Name=Sheet1
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
