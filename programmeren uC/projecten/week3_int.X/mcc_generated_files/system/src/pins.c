@@ -36,6 +36,7 @@
 
 static void (*SW0_InterruptHandler)(void);
 static void (*LED0_InterruptHandler)(void);
+static void (*IO_PC1_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
@@ -43,7 +44,7 @@ void PIN_MANAGER_Initialize()
   /* OUT Registers Initialization */
     PORTA.OUT = 0x0;
     PORTB.OUT = 0x0;
-    PORTC.OUT = 0x0;
+    PORTC.OUT = 0x2;
     PORTD.OUT = 0x0;
     PORTE.OUT = 0x0;
     PORTF.OUT = 0x0;
@@ -51,7 +52,7 @@ void PIN_MANAGER_Initialize()
   /* DIR Registers Initialization */
     PORTA.DIR = 0x0;
     PORTB.DIR = 0x8;
-    PORTC.DIR = 0x0;
+    PORTC.DIR = 0x2;
     PORTD.DIR = 0x0;
     PORTE.DIR = 0x0;
     PORTF.DIR = 0x0;
@@ -122,6 +123,7 @@ void PIN_MANAGER_Initialize()
   // register default ISC callback functions at runtime; use these methods to register a custom function
     SW0_SetInterruptHandler(SW0_DefaultInterruptHandler);
     LED0_SetInterruptHandler(LED0_DefaultInterruptHandler);
+    IO_PC1_SetInterruptHandler(IO_PC1_DefaultInterruptHandler);
 }
 
 /**
@@ -150,6 +152,19 @@ void LED0_DefaultInterruptHandler(void)
     // add your LED0 interrupt custom code
     // or set custom function using LED0_SetInterruptHandler()
 }
+/**
+  Allows selecting an interrupt handler for IO_PC1 at application runtime
+*/
+void IO_PC1_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    IO_PC1_InterruptHandler = interruptHandler;
+}
+
+void IO_PC1_DefaultInterruptHandler(void)
+{
+    // add your IO_PC1 interrupt custom code
+    // or set custom function using IO_PC1_SetInterruptHandler()
+}
 ISR(PORTA_PORT_vect)
 { 
     /* Clear interrupt flags */
@@ -173,6 +188,11 @@ ISR(PORTB_PORT_vect)
 
 ISR(PORTC_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTC.INTFLAGS & PORT_INT1_bm)
+    {
+       IO_PC1_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTC.INTFLAGS = 0xff;
 }

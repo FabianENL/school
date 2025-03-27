@@ -34,7 +34,10 @@ build/default/debug/mcc_generated_files/system/src/system.o.d \
  mcc_generated_files/system/src/../../system/./port.h \
  mcc_generated_files/system/src/../../system/./utils/compiler.h \
  mcc_generated_files/system/src/../../system/interrupt.h \
- mcc_generated_files/system/src/../../system/../system/utils/atomic.h
+ mcc_generated_files/system/src/../../system/../system/utils/atomic.h \
+ mcc_generated_files/system/src/../../spi/spi0.h \
+ mcc_generated_files/system/src/../../spi/../system/utils/compiler.h \
+ mcc_generated_files/system/src/../../spi/spi_interface.h
 
 mcc_generated_files/system/src/../system.h:
 
@@ -103,3 +106,9 @@ mcc_generated_files/system/src/../../system/./utils/compiler.h:
 mcc_generated_files/system/src/../../system/interrupt.h:
 
 mcc_generated_files/system/src/../../system/../system/utils/atomic.h:
+
+mcc_generated_files/system/src/../../spi/spi0.h:
+
+mcc_generated_files/system/src/../../spi/../system/utils/compiler.h:
+
+mcc_generated_files/system/src/../../spi/spi_interface.h:

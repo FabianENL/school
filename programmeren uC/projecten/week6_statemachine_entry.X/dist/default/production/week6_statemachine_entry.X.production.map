@@ -457,7 +457,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x6ac5
+.debug_info     0x0000000000000000     0x6ac4
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x3545 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
  .debug_info    0x0000000000003545      0x309 build/default/production/mcc_generated_files/system/src/system.o
@@ -466,9 +466,9 @@ END GROUP
  .debug_info    0x0000000000004b97      0x8cd build/default/production/mcc_generated_files/system/src/config_bits.o
  .debug_info    0x0000000000005464       0xa7 build/default/production/mcc_generated_files/system/src/protected_io.o
  .debug_info    0x000000000000550b      0xb57 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_info    0x0000000000006062      0xa63 build/default/production/main.o
+ .debug_info    0x0000000000006062      0xa62 build/default/production/main.o
 
-.debug_abbrev   0x0000000000000000     0x38e4
+.debug_abbrev   0x0000000000000000     0x38d3
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x3274 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
  .debug_abbrev  0x0000000000003274       0x58 build/default/production/mcc_generated_files/system/src/system.o
@@ -477,9 +477,9 @@ END GROUP
  .debug_abbrev  0x00000000000034fb       0x97 build/default/production/mcc_generated_files/system/src/config_bits.o
  .debug_abbrev  0x0000000000003592       0x14 build/default/production/mcc_generated_files/system/src/protected_io.o
  .debug_abbrev  0x00000000000035a6      0x162 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_abbrev  0x0000000000003708      0x1dc build/default/production/main.o
+ .debug_abbrev  0x0000000000003708      0x1cb build/default/production/main.o
 
-.debug_line     0x0000000000000000     0x11b0
+.debug_line     0x0000000000000000     0x11af
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x240 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
  .debug_line    0x0000000000000240       0xb7 build/default/production/mcc_generated_files/system/src/system.o
@@ -488,7 +488,7 @@ END GROUP
  .debug_line    0x0000000000000663      0x103 build/default/production/mcc_generated_files/system/src/config_bits.o
  .debug_line    0x0000000000000766       0x73 build/default/production/mcc_generated_files/system/src/protected_io.o
  .debug_line    0x00000000000007d9      0x4cd build/default/production/mcc_generated_files/system/src/pins.o
- .debug_line    0x0000000000000ca6      0x50a build/default/production/main.o
+ .debug_line    0x0000000000000ca6      0x509 build/default/production/main.o
 
 .debug_frame    0x0000000000000000      0x3c8
  *(.debug_frame)

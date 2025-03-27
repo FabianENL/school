@@ -34,6 +34,8 @@
 
 #include "../pins.h"
 
+static void (*SWPC1_InterruptHandler)(void);
+static void (*LED_InterruptHandler)(void);
 static void (*servo_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
@@ -49,7 +51,7 @@ void PIN_MANAGER_Initialize()
 
   /* DIR Registers Initialization */
     PORTA.DIR = 0x0;
-    PORTB.DIR = 0x0;
+    PORTB.DIR = 0x8;
     PORTC.DIR = 0x1;
     PORTD.DIR = 0x0;
     PORTE.DIR = 0x0;
@@ -67,13 +69,13 @@ void PIN_MANAGER_Initialize()
     PORTB.PIN0CTRL = 0x0;
     PORTB.PIN1CTRL = 0x0;
     PORTB.PIN2CTRL = 0x0;
-    PORTB.PIN3CTRL = 0x0;
+    PORTB.PIN3CTRL = 0x80;
     PORTB.PIN4CTRL = 0x0;
     PORTB.PIN5CTRL = 0x0;
     PORTB.PIN6CTRL = 0x0;
     PORTB.PIN7CTRL = 0x0;
     PORTC.PIN0CTRL = 0x0;
-    PORTC.PIN1CTRL = 0x0;
+    PORTC.PIN1CTRL = 0xA;
     PORTC.PIN2CTRL = 0x0;
     PORTC.PIN3CTRL = 0x0;
     PORTC.PIN4CTRL = 0x0;
@@ -119,9 +121,37 @@ void PIN_MANAGER_Initialize()
     PORTMUX.ZCDROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
+    SWPC1_SetInterruptHandler(SWPC1_DefaultInterruptHandler);
+    LED_SetInterruptHandler(LED_DefaultInterruptHandler);
     servo_SetInterruptHandler(servo_DefaultInterruptHandler);
 }
 
+/**
+  Allows selecting an interrupt handler for SWPC1 at application runtime
+*/
+void SWPC1_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    SWPC1_InterruptHandler = interruptHandler;
+}
+
+void SWPC1_DefaultInterruptHandler(void)
+{
+    // add your SWPC1 interrupt custom code
+    // or set custom function using SWPC1_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for LED at application runtime
+*/
+void LED_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    LED_InterruptHandler = interruptHandler;
+}
+
+void LED_DefaultInterruptHandler(void)
+{
+    // add your LED interrupt custom code
+    // or set custom function using LED_SetInterruptHandler()
+}
 /**
   Allows selecting an interrupt handler for servo at application runtime
 */
@@ -143,6 +173,11 @@ ISR(PORTA_PORT_vect)
 
 ISR(PORTB_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTB.INTFLAGS & PORT_INT3_bm)
+    {
+       LED_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTB.INTFLAGS = 0xff;
 }
@@ -150,6 +185,10 @@ ISR(PORTB_PORT_vect)
 ISR(PORTC_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
+    if(VPORTC.INTFLAGS & PORT_INT1_bm)
+    {
+       SWPC1_InterruptHandler(); 
+    }
     if(VPORTC.INTFLAGS & PORT_INT0_bm)
     {
        servo_InterruptHandler(); 

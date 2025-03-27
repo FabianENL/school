@@ -81,24 +81,15 @@ int main(void)
                 }
                 switch (currentFlow) {
                     case F_ENTRY:
-                        
-                        // Entry Action, 1x uitgevoerd
                         currentFlow = F_ACTIVITY;
-                        // Geen break, we voeren activity direct uit.
-
                     case F_ACTIVITY:
-                        
-                        // State activity, elke iteratie uitgevoerd
                         if (nextState == currentState) {
                             break;
                         } else {
                             currentFlow = F_EXIT;
-                            // Geen break, ga gelijk door naar F_EXIT.
                         }
 
                     case F_EXIT:
-                        
-                        // Exit activity, 1x uitgevoerd
                         currentFlow = F_ENTRY; // Reset state flow.
                         break;
                 }
@@ -120,23 +111,17 @@ int main(void)
                 switch (currentFlow) {
                     case F_ENTRY:
                         entryS1();
-                        // Entry Action, 1x uitgevoerd
                         currentFlow = F_ACTIVITY;
-                        // Geen break, we voeren activity direct uit.
 
                     case F_ACTIVITY:
-                        
-                        // State activity, elke iteratie uitgevoerd
                         if (nextState == currentState) {
                             break;
                         } else {
                             currentFlow = F_EXIT;
-                            // Geen break, ga gelijk door naar F_EXIT.
                         }
 
                     case F_EXIT:
                         exitS1();
-                        // Exit activity, 1x uitgevoerd
                         currentFlow = F_ENTRY; // Reset state flow.
                         break;
                 }
@@ -158,23 +143,17 @@ int main(void)
                 switch (currentFlow) {
                     case F_ENTRY:
                         entryS2();
-                        // Entry Action, 1x uitgevoerd
                         currentFlow = F_ACTIVITY;
-                        // Geen break, we voeren activity direct uit.
 
                     case F_ACTIVITY:
-                        
-                        // State activity, elke iteratie uitgevoerd
                         if (nextState == currentState) {
                             break;
                         } else {
                             currentFlow = F_EXIT;
-                            // Geen break, ga gelijk door naar F_EXIT.
                         }
 
                     case F_EXIT:
                         exitS2();
-                        // Exit activity, 1x uitgevoerd
                         currentFlow = F_ENTRY; // Reset state flow.
                         break;
                 }
@@ -195,24 +174,18 @@ int main(void)
                 }
                 switch (currentFlow) {
                     case F_ENTRY:
-                        
-                        // Entry Action, 1x uitgevoerd
                         currentFlow = F_ACTIVITY;
-                        // Geen break, we voeren activity direct uit.
 
                     case F_ACTIVITY:
                         doS3();
-                        // State activity, elke iteratie uitgevoerd
                         if (nextState == currentState) {
                             break;
                         } else {
                             currentFlow = F_EXIT;
-                            // Geen break, ga gelijk door naar F_EXIT.
                         }
 
                     case F_EXIT:
                         exitS3();
-                        // Exit activity, 1x uitgevoerd
                         currentFlow = F_ENTRY; // Reset state flow.
                         break;
                 }
@@ -233,24 +206,17 @@ int main(void)
                 }
                 switch (currentFlow) {
                     case F_ENTRY:
-                        
-                        // Entry Action, 1x uitgevoerd
                         currentFlow = F_ACTIVITY;
-                        // Geen break, we voeren activity direct uit.
-
                     case F_ACTIVITY:
                         doS4();
-                        // State activity, elke iteratie uitgevoerd
                         if (nextState == currentState) {
                             break;
                         } else {
                             currentFlow = F_EXIT;
-                            // Geen break, ga gelijk door naar F_EXIT.
                         }
 
                     case F_EXIT:
                         exitS4();
-                        // Exit activity, 1x uitgevoerd
                         currentFlow = F_ENTRY; // Reset state flow.
                         break;
                 }
