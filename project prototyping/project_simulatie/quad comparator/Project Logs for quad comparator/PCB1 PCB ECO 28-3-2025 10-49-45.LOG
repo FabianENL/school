@@ -1,0 +1,25 @@
+Added Component: Designator=H1(headers)
+Added Component: Designator=H2(headers)
+Added Component: Designator=R1(pot)
+Added Component: Designator=T2(Terminal)
+Added Component: Designator=U1(quad omamp 2*lm393)
+Added Pin To Net: NetName=NetH1_1 Pin=H1-1
+Added Net: Name=NetH1_1
+Added Pin To Net: NetName=NetH1_2 Pin=H1-2
+Added Net: Name=NetH1_2
+Added Pin To Net: NetName=NetH1_3 Pin=H1-3
+Added Net: Name=NetH1_3
+Added Pin To Net: NetName=NetH1_4 Pin=H1-4
+Added Net: Name=NetH1_4
+Added Pin To Net: NetName=NetH2_1 Pin=H2-1
+Added Net: Name=NetH2_1
+Added Pin To Net: NetName=NetH2_2 Pin=H2-2
+Added Net: Name=NetH2_2
+Added Pin To Net: NetName=NetH2_3 Pin=H2-3
+Added Net: Name=NetH2_3
+Added Pin To Net: NetName=NetH2_4 Pin=H2-4
+Added Net: Name=NetH2_4
+Added Net: Name=NetR1_1
+Added Net: Name=NetR1_2
+Added Net: Name=NetR1_3
+Added Class: Name=Sheet1
