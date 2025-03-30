@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=servo_Dxc.X
+PROJECTNAME=servo_DxC.X
 
 # Active Configuration
 DEFAULTCONF=default
