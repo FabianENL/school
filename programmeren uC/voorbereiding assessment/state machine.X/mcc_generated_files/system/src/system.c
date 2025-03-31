@@ -34,12 +34,28 @@
 
 #include "../system.h"
 
+int8_t SLPCTRL_Initialize();
+
 void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
     TCA0_Initialize();
     TCA1_Initialize();
+    SLPCTRL_Initialize();
     CPUINT_Initialize();
 }
+
+int8_t SLPCTRL_Initialize()
+{
+    //SEN enabled; SMODE IDLE; 
+    ccp_write_io((void*)&(SLPCTRL.CTRLA),0x1);
+    
+    //HTLLEN OFF; PMODE AUTO; 
+    ccp_write_io((void*)&(SLPCTRL.VREGCTRL),0x0);
+    
+
+    return 0;
+}
+
 

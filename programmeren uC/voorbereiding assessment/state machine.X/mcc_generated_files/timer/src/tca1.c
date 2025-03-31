@@ -98,7 +98,7 @@ void TCA1_Initialize(void)
 
     TCA1.SPLIT.LPER = 0xFFU;  // LPER 0xFF
 
-    TCA1.SPLIT.CTRLA = (TCA_SPLIT_CLKSEL_DIV1_gc)   // CLKSEL DIV1
+    TCA1.SPLIT.CTRLA = (TCA_SPLIT_CLKSEL_DIV1024_gc)   // CLKSEL DIV1024
         | (1 << TCA_SPLIT_ENABLE_bp)   // ENABLE enabled
         | (0 << TCA_SPLIT_RUNSTDBY_bp);  // RUNSTDBY disabled
 }

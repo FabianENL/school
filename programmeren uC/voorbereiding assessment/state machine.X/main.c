@@ -3,13 +3,14 @@
 //
 
 #include "mcc_generated_files/system/system.h"
+#include <avr/sleep.h>
 
 typedef enum {S_Idle, S_Wakker, S_Standby} states;
 typedef enum {E_Druk, E_Timeout, E_no_event} events;
 
 states currentState = S_Idle;
 states nextState = S_Idle;
-volatile events currentEvent = E_no_event;
+events currentEvent = E_no_event;
 
 uint8_t timerStarted = 0;
 
@@ -31,14 +32,13 @@ int main(void)
     SYSTEM_Initialize();
     
     SW0_SetInterruptHandler(SW0_Press);
-    TCA0_OverflowCallbackRegister(TimerInterrupt);
+    TCA0_Compare0CallbackRegister(TimerInterrupt);
     
     while(1)
     {
         switch(currentState){
             case S_Idle:
                 switch(currentEvent){
-                    TCA1_SPLIT_HCMP0 = 0;
                     case E_Druk:
                         nextState = S_Wakker;
                         currentEvent = E_no_event;
@@ -46,6 +46,8 @@ int main(void)
                     case E_Timeout:
                         break;
                     case E_no_event:
+                        TCA1_SPLIT_HCMP0 = 0;
+                        sleep_mode();
                         break;
                 }
                 break;
@@ -80,11 +82,10 @@ int main(void)
                         currentEvent = E_no_event;
                         break;
                     case E_no_event:
+                        TCA1_SPLIT_HCMP0 = 10;
                         if(!timerStarted){
                             timerStarted = 1;
                             TCA0.SINGLE.CNT = 0;
-                            a += 10;
-                            TCA1_SPLIT_HCMP0 = a % 255;
                         }
                         break;
                 }

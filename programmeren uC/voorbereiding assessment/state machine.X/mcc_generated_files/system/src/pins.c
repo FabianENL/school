@@ -34,8 +34,8 @@
 
 #include "../pins.h"
 
-static void (*LED0_InterruptHandler)(void);
 static void (*IO_PA0_InterruptHandler)(void);
+static void (*LED0_InterruptHandler)(void);
 static void (*SW0_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
@@ -121,24 +121,11 @@ void PIN_MANAGER_Initialize()
     PORTMUX.ZCDROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
-    LED0_SetInterruptHandler(LED0_DefaultInterruptHandler);
     IO_PA0_SetInterruptHandler(IO_PA0_DefaultInterruptHandler);
+    LED0_SetInterruptHandler(LED0_DefaultInterruptHandler);
     SW0_SetInterruptHandler(SW0_DefaultInterruptHandler);
 }
 
-/**
-  Allows selecting an interrupt handler for LED0 at application runtime
-*/
-void LED0_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    LED0_InterruptHandler = interruptHandler;
-}
-
-void LED0_DefaultInterruptHandler(void)
-{
-    // add your LED0 interrupt custom code
-    // or set custom function using LED0_SetInterruptHandler()
-}
 /**
   Allows selecting an interrupt handler for IO_PA0 at application runtime
 */
@@ -151,6 +138,19 @@ void IO_PA0_DefaultInterruptHandler(void)
 {
     // add your IO_PA0 interrupt custom code
     // or set custom function using IO_PA0_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for LED0 at application runtime
+*/
+void LED0_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    LED0_InterruptHandler = interruptHandler;
+}
+
+void LED0_DefaultInterruptHandler(void)
+{
+    // add your LED0 interrupt custom code
+    // or set custom function using LED0_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for SW0 at application runtime

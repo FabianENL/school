@@ -37,7 +37,8 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  mcc_generated_files/system/../timer/../system/utils/compiler.h \
  mcc_generated_files/system/../timer/./tca0_deprecated.h \
  mcc_generated_files/system/../timer/tca1.h \
- mcc_generated_files/system/../timer/./tca1_deprecated.h
+ mcc_generated_files/system/../timer/./tca1_deprecated.h \
+ c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\sleep.h
 
 mcc_generated_files/system/system.h:
 
@@ -116,3 +117,5 @@ mcc_generated_files/system/../timer/./tca0_deprecated.h:
 mcc_generated_files/system/../timer/tca1.h:
 
 mcc_generated_files/system/../timer/./tca1_deprecated.h:
+
+c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\sleep.h:

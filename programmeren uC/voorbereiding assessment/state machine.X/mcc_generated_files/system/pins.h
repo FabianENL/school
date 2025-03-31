@@ -38,25 +38,6 @@
 #include <avr/io.h>
 #include "./port.h"
 
-//get/set LED0 aliases
-#define LED0_SetHigh() do { PORTB_OUTSET = 0x8; } while(0)
-#define LED0_SetLow() do { PORTB_OUTCLR = 0x8; } while(0)
-#define LED0_Toggle() do { PORTB_OUTTGL = 0x8; } while(0)
-#define LED0_GetValue() (VPORTB.IN & (0x1 << 3))
-#define LED0_SetDigitalInput() do { PORTB_DIRCLR = 0x8; } while(0)
-#define LED0_SetDigitalOutput() do { PORTB_DIRSET = 0x8; } while(0)
-#define LED0_SetPullUp() do { PORTB_PIN3CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define LED0_ResetPullUp() do { PORTB_PIN3CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define LED0_SetInverted() do { PORTB_PIN3CTRL  |= PORT_INVEN_bm; } while(0)
-#define LED0_ResetInverted() do { PORTB_PIN3CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define LED0_DisableInterruptOnChange() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define LED0_EnableInterruptForBothEdges() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define LED0_EnableInterruptForRisingEdge() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define LED0_EnableInterruptForFallingEdge() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define LED0_DisableDigitalInputBuffer() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define LED0_EnableInterruptForLowLevelSensing() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PB3_SetInterruptHandler LED0_SetInterruptHandler
-
 //get/set IO_PA0 aliases
 #define IO_PA0_SetHigh() do { PORTA_OUTSET = 0x1; } while(0)
 #define IO_PA0_SetLow() do { PORTA_OUTCLR = 0x1; } while(0)
@@ -75,6 +56,25 @@
 #define IO_PA0_DisableDigitalInputBuffer() do { PORTA.PIN0CTRL = (PORTA.PIN0CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
 #define IO_PA0_EnableInterruptForLowLevelSensing() do { PORTA.PIN0CTRL = (PORTA.PIN0CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA0_SetInterruptHandler IO_PA0_SetInterruptHandler
+
+//get/set LED0 aliases
+#define LED0_SetHigh() do { PORTB_OUTSET = 0x8; } while(0)
+#define LED0_SetLow() do { PORTB_OUTCLR = 0x8; } while(0)
+#define LED0_Toggle() do { PORTB_OUTTGL = 0x8; } while(0)
+#define LED0_GetValue() (VPORTB.IN & (0x1 << 3))
+#define LED0_SetDigitalInput() do { PORTB_DIRCLR = 0x8; } while(0)
+#define LED0_SetDigitalOutput() do { PORTB_DIRSET = 0x8; } while(0)
+#define LED0_SetPullUp() do { PORTB_PIN3CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define LED0_ResetPullUp() do { PORTB_PIN3CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define LED0_SetInverted() do { PORTB_PIN3CTRL  |= PORT_INVEN_bm; } while(0)
+#define LED0_ResetInverted() do { PORTB_PIN3CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define LED0_DisableInterruptOnChange() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define LED0_EnableInterruptForBothEdges() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define LED0_EnableInterruptForRisingEdge() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define LED0_EnableInterruptForFallingEdge() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define LED0_DisableDigitalInputBuffer() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define LED0_EnableInterruptForLowLevelSensing() do { PORTB.PIN3CTRL = (PORTB.PIN3CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PB3_SetInterruptHandler LED0_SetInterruptHandler
 
 //get/set SW0 aliases
 #define SW0_SetHigh() do { PORTB_OUTSET = 0x4; } while(0)
@@ -105,27 +105,6 @@ void PIN_MANAGER_Initialize();
 
 /**
  * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for LED0 pin. 
- *        This is a predefined interrupt handler to be used together with the LED0_SetInterruptHandler() method.
- *        This handler is called every time the LED0 ISR is executed. 
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param none
- * @return none
- */
-void LED0_DefaultInterruptHandler(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for LED0 pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for LED0 at application runtime
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param InterruptHandler function pointer.
- * @return none
- */
-void LED0_SetInterruptHandler(void (* interruptHandler)(void)) ; 
-
-/**
- * @ingroup  pinsdriver
  * @brief Default Interrupt Handler for IO_PA0 pin. 
  *        This is a predefined interrupt handler to be used together with the IO_PA0_SetInterruptHandler() method.
  *        This handler is called every time the IO_PA0 ISR is executed. 
@@ -144,6 +123,27 @@ void IO_PA0_DefaultInterruptHandler(void);
  * @return none
  */
 void IO_PA0_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for LED0 pin. 
+ *        This is a predefined interrupt handler to be used together with the LED0_SetInterruptHandler() method.
+ *        This handler is called every time the LED0 ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void LED0_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for LED0 pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for LED0 at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void LED0_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver
