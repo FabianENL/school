@@ -104,7 +104,7 @@ Discarded input sections
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text.IO_PB0_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.IO_PD4_SetInterruptHandler
+ .text.IO_PE3_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text          0x0000000000000000        0x0 build/default/production/mcc_generated_files/system/src/protected_io.o
  .data          0x0000000000000000        0x0 build/default/production/mcc_generated_files/system/src/protected_io.o
@@ -749,9 +749,9 @@ LOAD data_init
  .bss.ADC0_ConversionDoneCallback
                 0x0000000000804002        0x2 build/default/production/mcc_generated_files/adc/src/adc0.o
 
-.bss.IO_PD4_InterruptHandler
+.bss.IO_PE3_InterruptHandler
                 0x0000000000804004        0x2
- .bss.IO_PD4_InterruptHandler
+ .bss.IO_PE3_InterruptHandler
                 0x0000000000804004        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.IO_PB0_InterruptHandler
@@ -859,11 +859,11 @@ LOAD data_init
                 0x0000000000000576       0x60 build/default/production/mcc_generated_files/timer/src/rtc.o
                 0x0000000000000576                __vector_6
 
-.text.__vector_24
+.text.__vector_46
                 0x00000000000005d6       0x5e
- .text.__vector_24
+ .text.__vector_46
                 0x00000000000005d6       0x5e build/default/production/mcc_generated_files/system/src/pins.o
-                0x00000000000005d6                __vector_24
+                0x00000000000005d6                __vector_46
 
 .text.ADC0_Initialize
                 0x0000000000000634       0x4c
@@ -945,11 +945,11 @@ LOAD data_init
                 0x00000000000007fa        0xa build/default/production/mcc_generated_files/system/src/pins.o
                 0x00000000000007fa                __vector_30
 
-.text.__vector_46
+.text.__vector_24
                 0x0000000000000804        0xa
- .text.__vector_46
+ .text.__vector_24
                 0x0000000000000804        0xa build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000000804                __vector_46
+                0x0000000000000804                __vector_24
 
 .text.__vector_35
                 0x000000000000080e        0xa
@@ -1033,11 +1033,11 @@ LOAD data_init
                 0x000000000000082c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
                 0x000000000000082c                IO_PB0_DefaultInterruptHandler
 
-.text.IO_PD4_DefaultInterruptHandler
+.text.IO_PE3_DefaultInterruptHandler
                 0x000000000000082e        0x2
- .text.IO_PD4_DefaultInterruptHandler
+ .text.IO_PE3_DefaultInterruptHandler
                 0x000000000000082e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x000000000000082e                IO_PD4_DefaultInterruptHandler
+                0x000000000000082e                IO_PE3_DefaultInterruptHandler
 
 .text.USART3_DefaultFramingErrorCallback
                 0x0000000000000830        0x2

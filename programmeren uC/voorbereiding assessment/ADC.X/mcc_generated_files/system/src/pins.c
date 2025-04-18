@@ -36,7 +36,7 @@
 
 static void (*IO_PB1_InterruptHandler)(void);
 static void (*IO_PB0_InterruptHandler)(void);
-static void (*IO_PD4_InterruptHandler)(void);
+static void (*IO_PE3_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
@@ -123,7 +123,7 @@ void PIN_MANAGER_Initialize()
   // register default ISC callback functions at runtime; use these methods to register a custom function
     IO_PB1_SetInterruptHandler(IO_PB1_DefaultInterruptHandler);
     IO_PB0_SetInterruptHandler(IO_PB0_DefaultInterruptHandler);
-    IO_PD4_SetInterruptHandler(IO_PD4_DefaultInterruptHandler);
+    IO_PE3_SetInterruptHandler(IO_PE3_DefaultInterruptHandler);
 }
 
 /**
@@ -153,17 +153,17 @@ void IO_PB0_DefaultInterruptHandler(void)
     // or set custom function using IO_PB0_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD4 at application runtime
+  Allows selecting an interrupt handler for IO_PE3 at application runtime
 */
-void IO_PD4_SetInterruptHandler(void (* interruptHandler)(void)) 
+void IO_PE3_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD4_InterruptHandler = interruptHandler;
+    IO_PE3_InterruptHandler = interruptHandler;
 }
 
-void IO_PD4_DefaultInterruptHandler(void)
+void IO_PE3_DefaultInterruptHandler(void)
 {
-    // add your IO_PD4 interrupt custom code
-    // or set custom function using IO_PD4_SetInterruptHandler()
+    // add your IO_PE3 interrupt custom code
+    // or set custom function using IO_PE3_SetInterruptHandler()
 }
 ISR(PORTA_PORT_vect)
 { 
@@ -194,17 +194,17 @@ ISR(PORTC_PORT_vect)
 
 ISR(PORTD_PORT_vect)
 { 
-    // Call the interrupt handler for the callback registered at runtime
-    if(VPORTD.INTFLAGS & PORT_INT4_bm)
-    {
-       IO_PD4_InterruptHandler(); 
-    }
     /* Clear interrupt flags */
     VPORTD.INTFLAGS = 0xff;
 }
 
 ISR(PORTE_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTE.INTFLAGS & PORT_INT3_bm)
+    {
+       IO_PE3_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTE.INTFLAGS = 0xff;
 }

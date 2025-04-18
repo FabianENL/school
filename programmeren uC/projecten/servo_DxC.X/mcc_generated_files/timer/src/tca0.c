@@ -41,7 +41,7 @@ static void (*TCA0_OVFCallback)(void) = NULL;
 
 void TCA0_Initialize(void) 
 {
-    TCA0.SINGLE.CMP0 = 0x4E1U;  // CMP0 0x4E1
+    TCA0.SINGLE.CMP0 = 0x4E1FU;  // CMP0 0x4E1F
 
     TCA0.SINGLE.CMP1 = 0x0;  // CMP1 0x0
 

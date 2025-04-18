@@ -35,7 +35,12 @@
 #include "../pins.h"
 
 static void (*servo_InterruptHandler)(void);
+static void (*SW1_InterruptHandler)(void);
 static void (*SW0_InterruptHandler)(void);
+static void (*LED0_InterruptHandler)(void);
+static void (*STEP_InterruptHandler)(void);
+static void (*DIR_InterruptHandler)(void);
+static void (*EN_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
@@ -43,15 +48,15 @@ void PIN_MANAGER_Initialize()
   /* OUT Registers Initialization */
     PORTA.OUT = 0x0;
     PORTB.OUT = 0x0;
-    PORTC.OUT = 0x0;
+    PORTC.OUT = 0x4;
     PORTD.OUT = 0x0;
     PORTE.OUT = 0x0;
     PORTF.OUT = 0x0;
 
   /* DIR Registers Initialization */
     PORTA.DIR = 0x0;
-    PORTB.DIR = 0x0;
-    PORTC.DIR = 0x1;
+    PORTB.DIR = 0x8;
+    PORTC.DIR = 0xF;
     PORTD.DIR = 0x0;
     PORTE.DIR = 0x0;
     PORTF.DIR = 0x0;
@@ -67,15 +72,15 @@ void PIN_MANAGER_Initialize()
     PORTA.PIN7CTRL = 0x0;
     PORTB.PIN0CTRL = 0x0;
     PORTB.PIN1CTRL = 0x0;
-    PORTB.PIN2CTRL = 0x0;
-    PORTB.PIN3CTRL = 0x0;
+    PORTB.PIN2CTRL = 0xB;
+    PORTB.PIN3CTRL = 0x80;
     PORTB.PIN4CTRL = 0x0;
     PORTB.PIN5CTRL = 0x0;
     PORTB.PIN6CTRL = 0x0;
     PORTB.PIN7CTRL = 0x0;
     PORTC.PIN0CTRL = 0x0;
-    PORTC.PIN1CTRL = 0xB;
-    PORTC.PIN2CTRL = 0x0;
+    PORTC.PIN1CTRL = 0x0;
+    PORTC.PIN2CTRL = 0x80;
     PORTC.PIN3CTRL = 0x0;
     PORTC.PIN4CTRL = 0x0;
     PORTC.PIN5CTRL = 0x0;
@@ -100,7 +105,7 @@ void PIN_MANAGER_Initialize()
     PORTF.PIN0CTRL = 0x0;
     PORTF.PIN1CTRL = 0x0;
     PORTF.PIN2CTRL = 0x0;
-    PORTF.PIN3CTRL = 0x0;
+    PORTF.PIN3CTRL = 0xB;
     PORTF.PIN4CTRL = 0x0;
     PORTF.PIN5CTRL = 0x0;
     PORTF.PIN6CTRL = 0x0;
@@ -121,7 +126,12 @@ void PIN_MANAGER_Initialize()
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
     servo_SetInterruptHandler(servo_DefaultInterruptHandler);
+    SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
     SW0_SetInterruptHandler(SW0_DefaultInterruptHandler);
+    LED0_SetInterruptHandler(LED0_DefaultInterruptHandler);
+    STEP_SetInterruptHandler(STEP_DefaultInterruptHandler);
+    DIR_SetInterruptHandler(DIR_DefaultInterruptHandler);
+    EN_SetInterruptHandler(EN_DefaultInterruptHandler);
 }
 
 /**
@@ -138,6 +148,19 @@ void servo_DefaultInterruptHandler(void)
     // or set custom function using servo_SetInterruptHandler()
 }
 /**
+  Allows selecting an interrupt handler for SW1 at application runtime
+*/
+void SW1_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    SW1_InterruptHandler = interruptHandler;
+}
+
+void SW1_DefaultInterruptHandler(void)
+{
+    // add your SW1 interrupt custom code
+    // or set custom function using SW1_SetInterruptHandler()
+}
+/**
   Allows selecting an interrupt handler for SW0 at application runtime
 */
 void SW0_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -150,6 +173,58 @@ void SW0_DefaultInterruptHandler(void)
     // add your SW0 interrupt custom code
     // or set custom function using SW0_SetInterruptHandler()
 }
+/**
+  Allows selecting an interrupt handler for LED0 at application runtime
+*/
+void LED0_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    LED0_InterruptHandler = interruptHandler;
+}
+
+void LED0_DefaultInterruptHandler(void)
+{
+    // add your LED0 interrupt custom code
+    // or set custom function using LED0_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for STEP at application runtime
+*/
+void STEP_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    STEP_InterruptHandler = interruptHandler;
+}
+
+void STEP_DefaultInterruptHandler(void)
+{
+    // add your STEP interrupt custom code
+    // or set custom function using STEP_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for DIR at application runtime
+*/
+void DIR_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    DIR_InterruptHandler = interruptHandler;
+}
+
+void DIR_DefaultInterruptHandler(void)
+{
+    // add your DIR interrupt custom code
+    // or set custom function using DIR_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for EN at application runtime
+*/
+void EN_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    EN_InterruptHandler = interruptHandler;
+}
+
+void EN_DefaultInterruptHandler(void)
+{
+    // add your EN interrupt custom code
+    // or set custom function using EN_SetInterruptHandler()
+}
 ISR(PORTA_PORT_vect)
 { 
     /* Clear interrupt flags */
@@ -158,6 +233,15 @@ ISR(PORTA_PORT_vect)
 
 ISR(PORTB_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTB.INTFLAGS & PORT_INT2_bm)
+    {
+       SW1_InterruptHandler(); 
+    }
+    if(VPORTB.INTFLAGS & PORT_INT3_bm)
+    {
+       LED0_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTB.INTFLAGS = 0xff;
 }
@@ -171,7 +255,15 @@ ISR(PORTC_PORT_vect)
     }
     if(VPORTC.INTFLAGS & PORT_INT1_bm)
     {
-       SW0_InterruptHandler(); 
+       STEP_InterruptHandler(); 
+    }
+    if(VPORTC.INTFLAGS & PORT_INT2_bm)
+    {
+       DIR_InterruptHandler(); 
+    }
+    if(VPORTC.INTFLAGS & PORT_INT3_bm)
+    {
+       EN_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTC.INTFLAGS = 0xff;
@@ -191,6 +283,11 @@ ISR(PORTE_PORT_vect)
 
 ISR(PORTF_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTF.INTFLAGS & PORT_INT3_bm)
+    {
+       SW0_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTF.INTFLAGS = 0xff;
 }
